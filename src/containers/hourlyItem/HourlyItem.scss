@@ -1,0 +1,16 @@
+.hourly-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  padding: 3px;
+  .hour {
+    cursor: inherit;
+  }
+  .temp {
+    cursor: inherit;
+  }
+}
