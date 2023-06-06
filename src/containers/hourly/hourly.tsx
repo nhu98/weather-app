@@ -11,8 +11,6 @@ export const Hourly = () => {
     (state: RootState) => state.app.firstWidgetData
   );
 
-  console.log(firstDataWeather.forecast?.forecastday[0]);
-
   return (
     <div className="hourly">
       <label className="title">Hourly</label>

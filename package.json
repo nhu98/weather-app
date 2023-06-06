@@ -24,6 +24,7 @@
     "react-dom": "18.2.0",
     "react-error-boundary": "^4.0.9",
     "react-flip-move": "^3.0.5",
+    "react-icons": "^4.9.0",
     "react-indiana-drag-scroll": "^2.2.0",
     "react-redux": "^8.0.7",
     "redux": "^4.2.1",

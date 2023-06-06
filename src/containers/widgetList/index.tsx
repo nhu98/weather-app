@@ -93,6 +93,11 @@ export default function WidgetList() {
     }
   }, [weatherData]);
 
+  const handleDeleteClick = (index: number) => {
+    console.log('a');
+    setWidgets((prev) => prev.filter((_, i) => i !== index));
+  };
+
   return (
     <section onDragOver={(event) => event.preventDefault()}>
       <FlipMove className={`${wrapperClass}`}>
@@ -105,9 +110,18 @@ export default function WidgetList() {
               originalItems.current[dragItemIndex.current] === item
                 ? 'opacity-0'
                 : 'opacity-100'
-            } rounded-3xl bg-white`}
+            } rounded-3xl `}
+            style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.75)',
+              boxShadow: 'rgba(0, 0, 0, 0.1) 1px 1px 3px',
+              position: 'relative',
+            }}
           >
-            <WidgetWeather {...item} index={index} />
+            <WidgetWeather
+              {...item}
+              index={index}
+              onDelete={handleDeleteClick}
+            />
           </div>
         ))}
 
@@ -118,7 +132,7 @@ export default function WidgetList() {
             <div
               key={widget?.current.name}
               className={`${itemClass} cursor-grab rounded-3xl`}
-              draggable
+              draggable={!isDragging}
               onDragStart={(event) => {
                 originalItems.current = widgets;
                 dragItemIndex.current = index;

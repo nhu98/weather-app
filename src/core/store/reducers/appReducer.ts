@@ -78,11 +78,11 @@ export const getDataWeather = createAsyncThunk(
         (item: any) => {
           return {
             date: item.date,
-            maxtemp_c: item.maxtemp_c,
-            mintemp_c: item.mintemp_c,
-            maxwind_kph: item.maxwind_kph,
-            avghumidity: item.avghumidity,
-            condition: item.condition,
+            maxtemp_c: item.day.maxtemp_c,
+            mintemp_c: item.day.mintemp_c,
+            maxwind_kph: item.day.maxwind_kph,
+            avghumidity: item.day.avghumidity,
+            condition: item.day.condition,
             hour: item.hour.map((item: HourlyWeatherModel) => {
               return {
                 time: item.time,

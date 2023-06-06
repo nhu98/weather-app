@@ -13,7 +13,7 @@ export const HourlyItem = ({ data }: HourlyItemProps) => {
       <img
         src={data.condition.icon}
         alt={data.time}
-        style={{ width: '120px' }}
+        style={{ width: '100px' }}
       />
       <label className="temp">{data.temp_c}°C</label>
     </div>

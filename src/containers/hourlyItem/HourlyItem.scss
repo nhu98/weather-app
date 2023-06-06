@@ -9,8 +9,11 @@
   padding: 3px;
   .hour {
     cursor: inherit;
+    color: rgb(69, 129, 197);
+    font-weight: bold;
   }
   .temp {
     cursor: inherit;
+    color: rgb(74, 111, 161);
   }
 }
